@@ -45,10 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   radius: 1
   damage: 2
-  isPlayer: 0
+  isPlayer: 1
   isEnemy: 0
 --- !u!1 &1946949464
 GameObject:
@@ -95,10 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   radius: 1
   damage: 2
-  isPlayer: 0
+  isPlayer: 1
   isEnemy: 0
 --- !u!1 &635209927750987556
 GameObject:
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   radius: 1
   damage: 2
-  isPlayer: 0
+  isPlayer: 1
   isEnemy: 0
 --- !u!1 &5549897282007006642
 GameObject:
@@ -195,10 +195,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   radius: 1
   damage: 2
-  isPlayer: 0
+  isPlayer: 1
   isEnemy: 0
 --- !u!1 &8042663414087576466
 GameObject:
@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 8042663414087576465}
   - component: {fileID: 8042663414087576464}
   - component: {fileID: 8042663414087576467}
+  - component: {fileID: 1971302457352716174}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -244,13 +245,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.7
+  m_Radius: 0.23
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.94, z: 0}
 --- !u!114 &8042663414087576467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +264,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941cafa4911d7fc429a28586693e78e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1971302457352716174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042663414087576466}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 36
+  m_CollisionDetection: 0
 --- !u!1001 &8042663413944801260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -350,24 +367,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: b868175f2d17ec2408c937229c7f9398, type: 3}
   m_PrefabInstance: {fileID: 8042663413944801260}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &8042663412836453784
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7159648165547272893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &8042663412836453861
 Animator:
   serializedVersion: 3
@@ -387,6 +386,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1596121535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159648165547272893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bb9bb8b309e5142b0a512f63532b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftArmPoint: {fileID: 1946949464}
+  rightArmPoint: {fileID: 69603138}
+  leftLegPoint: {fileID: 635209927750987556}
+  rightLegPoint: {fileID: 5549897282007006642}
 --- !u!114 &8042663412836453785
 MonoBehaviour:
   m_ObjectHideFlags: 0

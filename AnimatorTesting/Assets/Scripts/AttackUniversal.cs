@@ -21,6 +21,8 @@ public class AttackUniversal : MonoBehaviour
         if(hit.Length > 0)
         {
             Debug.Log("We hit the " + hit[0].gameObject.name);
+
+            gameObject.SetActive(false);
         }
     }
 }
