@@ -24,5 +24,11 @@ public class AttackUniversal : MonoBehaviour
 
             gameObject.SetActive(false);
         }
+
+        if(gameObject.CompareTag(Tags.LEFT_ARM_TAG) ||
+            gameObject.CompareTag(Tags.LEFT_LEG_TAG))
+        {
+            hit[0].GetComponent<HealthManager>().ApplyDamage(damage);
+        }
     }
 }

@@ -50,4 +50,21 @@ public class CharacterAnimationDelegates : MonoBehaviour
             leftArmPoint.SetActive(false);
         }
     }
+
+    void TagLeftArm()
+    {
+        leftArmPoint.tag = Tags.LEFT_ARM_TAG;
+    }
+    void UntagLeftArm()
+    {
+        leftArmPoint.tag = Tags.UNTAGGED_TAG;
+    }
+    void TagLeftLeg()
+    {
+        leftLegPoint.tag = Tags.LEFT_LEG_TAG;
+    }
+    void UntagLeftLeg()
+    {
+        leftLegPoint.tag = Tags.UNTAGGED_TAG;
+    }
 }

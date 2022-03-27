@@ -1523,6 +1523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 292722963324111984, guid: 178eae2b321d9d749ae18733e7130e0a, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 178eae2b321d9d749ae18733e7130e0a, type: 3}
 --- !u!1001 &8042663413555866714
@@ -1532,6 +1536,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1971302457352716174, guid: 130c5299ad297884bb5c9e0accbb4e4c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971302457352716174, guid: 130c5299ad297884bb5c9e0accbb4e4c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8042663414087576465, guid: 130c5299ad297884bb5c9e0accbb4e4c, type: 3}
       propertyPath: m_RootOrder
       value: 8
