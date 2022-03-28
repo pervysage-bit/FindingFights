@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338eafa756561fb489549c84176ddb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 2
   is_Player: 0
 --- !u!1 &2048461487130518470
 GameObject:
@@ -265,3 +265,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b592420fb0668418606f9babad84a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1509969270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634616303200025368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bb9bb8b309e5142b0a512f63532b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftArmPoint: {fileID: 0}
+  rightArmPoint: {fileID: 0}
+  leftLegPoint: {fileID: 0}
+  rightLegPoint: {fileID: 0}
