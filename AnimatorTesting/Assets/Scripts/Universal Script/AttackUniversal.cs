@@ -20,15 +20,18 @@ public class AttackUniversal : MonoBehaviour
 
         if(hit.Length > 0)
         {
-            Debug.Log("We hit the " + hit[0].gameObject.name);
+            if (isPlayer)
+            {
+                Debug.Log("We hit the " + hit[0].gameObject.name);
 
-            gameObject.SetActive(false);
-        }
+                gameObject.SetActive(false);
+            }
 
-        if(gameObject.CompareTag(Tags.LEFT_ARM_TAG) ||
-            gameObject.CompareTag(Tags.LEFT_LEG_TAG))
-        {
-            hit[0].GetComponent<HealthManager>().ApplyDamage(damage);
-        }
+            if (gameObject.CompareTag(Tags.LEFT_ARM_TAG) ||
+                gameObject.CompareTag(Tags.LEFT_LEG_TAG))
+            {
+                hit[0].GetComponent<HealthManager>().ApplyDamage(damage);
+            }
+        }                 
     }
 }

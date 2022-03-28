@@ -38,8 +38,10 @@ public class HealthManager : MonoBehaviour
 
              if (is_Player)
              {
-
+                GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;
              }
+
+            return;
         }
 
         if (!is_Player)

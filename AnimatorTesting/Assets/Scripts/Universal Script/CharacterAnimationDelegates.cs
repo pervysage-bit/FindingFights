@@ -5,7 +5,12 @@ using UnityEngine;
 public class CharacterAnimationDelegates : MonoBehaviour
 {
     public GameObject leftArmPoint, rightArmPoint, leftLegPoint, rightLegPoint;
+    private EnemyMovement enemy_Movement;
 
+    private void Awake()
+    {
+        enemy_Movement = GetComponentInParent<EnemyMovement>();
+    }
     void LeftArmAttackOn()
     {
         leftArmPoint.SetActive(true);
@@ -66,5 +71,27 @@ public class CharacterAnimationDelegates : MonoBehaviour
     void UntagLeftLeg()
     {
         leftLegPoint.tag = Tags.UNTAGGED_TAG;
+    }
+
+    void DisableMovement()
+    {
+        enemy_Movement.enabled = false;
+        transform.parent.gameObject.layer = 0;
+    }
+    void EnableMovement()
+    {
+        enemy_Movement.enabled = true;
+        transform.parent.gameObject.layer = 7;
+    }
+    void CharacterDied()
+    {
+        Invoke("DeactivateGameObject", 2f);
+    }
+    
+    void DeactivateGameObject()
+    {
+        //EnemyManager.instance.SpawnEnemy();
+
+        gameObject.SetActive(false);
     }
 }
